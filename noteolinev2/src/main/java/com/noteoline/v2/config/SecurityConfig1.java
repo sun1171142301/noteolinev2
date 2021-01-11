@@ -39,6 +39,8 @@ public class SecurityConfig1 extends WebSecurityConfigurerAdapter {
                     .antMatchers("/in/a","/s/a","/p/a").hasAuthority("common")
                 .and().csrf().disable();
 
+        http.headers().frameOptions().sameOrigin();
+
                 /*.usernameParameter("username").passwordParameter("password")*/
                 /*.failureUrl("/login?error");*/
         http.logout()
