@@ -74,7 +74,7 @@ public class controller {
         return "index";}
 
         @GetMapping("/login?error")
-    public ModelAndView loginError(HttpServletRequest request, Model model){
+        public ModelAndView loginError(HttpServletRequest request, Model model){
         model.addAttribute("longinError",true);
         model.addAttribute("errorMsg","登陆失败，账号密码错误");
         return new ModelAndView("login","userModel",model);

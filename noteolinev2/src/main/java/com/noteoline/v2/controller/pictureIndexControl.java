@@ -12,6 +12,7 @@ import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ClassUtils;
 import org.springframework.web.bind.annotation.*;
@@ -106,7 +107,7 @@ public class pictureIndexControl {
 
 
     @ResponseBody
-
+    @PreAuthorize("admins")
     @RequestMapping("/KindEditorUpmethod")
     public JSONObject uploadMethod(@RequestParam String callBackPath, @RequestParam(value = "imgFile", required = false) MultipartFile file, HttpServletRequest request, HttpServletResponse response) throws FileUploadException, IOException {
 

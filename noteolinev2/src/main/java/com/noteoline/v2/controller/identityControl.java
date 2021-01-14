@@ -1,4 +1,4 @@
-package com.noteoline.v2.controller;
+/*package com.noteoline.v2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,4 +10,4 @@ public class identityControl {
     public String mainPage(){
         return "main";
     }//避免重复提交表单
-}
+}*/

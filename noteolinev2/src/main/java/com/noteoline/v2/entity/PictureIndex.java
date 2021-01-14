@@ -13,6 +13,7 @@ import java.sql.Blob;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table(name = "pictureindex")
 public class PictureIndex {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

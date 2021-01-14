@@ -1,5 +1,6 @@
 package com.noteoline.v2.entity;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,4 +36,7 @@ public class Infotable {
     @Column(name = "updatetime",nullable = false)
     Timestamp updatetime;//Timestamp序列化问题
 //    updatetime
+
+    @Column(name = "hidden",nullable = false)
+    Boolean hidden;
 }

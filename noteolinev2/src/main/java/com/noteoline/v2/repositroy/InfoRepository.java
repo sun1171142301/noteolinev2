@@ -26,5 +26,8 @@ public interface InfoRepository extends JpaRepository <Infotable,Integer> {
         @Query(value = "select * from infotable where cid=?1",nativeQuery = true)
         public List<Infotable> findAllByType(int type);
 
+        @Query(value = "select * from infotable where cid=?1 and hidden=false ",nativeQuery = true)
+        public List<Infotable> findAllByTypeVersionControl(int type);
+
 
 }
